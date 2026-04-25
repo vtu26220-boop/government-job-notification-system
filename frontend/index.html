@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Government Job Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="showPopup(); loadJobs();">
+
+<header class="tn-header">
+    <div class="tn-logo">
+        <div class="seal">🏛️</div>
+        <div>
+            <h2>Department of</h2>
+            <h2>Employment and Training</h2>
+        </div>
+    </div>
+
+    <nav class="tn-nav">
+        <a href="index.html">🏚️ HOME</a>
+        <a href="dashboard.html">💼 JOBS</a>
+        <a href="#">🎓 JOB FAIR</a>
+        <button onclick="window.location.href='login.html'" class="login-main">Login ▼</button>
+        <select id="languageSelect" onchange="changeLanguage()" class="lang-select">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+        </select>
+    </nav>
+</header>
+
+<div class="ticker">
+    <b>Job Fair</b>
+    <marquee>
+        STATISTICS OF MICRO AND MEGA JOB FAIRS - JOB SEEKERS ATTENDED - 12,08,200, JOB SEEKERS PLACED - 2,13,611
+    </marquee>
+</div>
+
+<section class="tn-hero">
+   
+    <h2>Government Job Portal</h2>
+
+    
+
+    <div class="hero-search">
+        <input placeholder="Job Title">
+        <button>🔍</button>
+    </div>
+</section>
+
+<section class="vacancy-area">
+    <div>
+        <h1>Live Vacancies <span>LIVE</span></h1>
+        <p>Find thousands of exclusive job opportunities across Tamil Nadu's leading private companies.</p>
+    </div>
+
+    <div class="vacancy-stats">
+        <div>💼<h1>14,490</h1><p>Vacancies</p></div>
+        <div>👥<h1>291</h1><p>Employers</p></div>
+    </div>
+</section>
+
+<section class="mini-stats">
+    <div>👨‍💼<h3>12,325</h3><p>Companies</p></div>
+    <div>⚙️<h3>43</h3><p>Sectors</p></div>
+    <div>📋<h3>449,063</h3><p>Jobs Posted</p></div>
+    <div>👥<h3>540,707</h3><p>Job Seekers</p></div>
+    <div>🧾<h3>70,156</h3><p>Placements Offered</p></div>
+    <div>✅<h3>53,603</h3><p>Job Seekers Placed</p></div>
+</section>
+
+<section class="latest-jobs">
+    <h2>Latest <span>Jobs</span></h2>
+    <div id="jobs" class="jobs-container"></div>
+    <button class="view-btn">VIEW ALL LATEST JOBS</button>
+</section>
+
+<section class="top-sectors">
+    <h2>Top <span>Sectors</span></h2>
+
+    <div class="sector-container">
+        <div class="sector">🚗<p>Automotive</p></div>
+        <div class="sector">💵<p>BFSI</p></div>
+        <div class="sector">📈<p>Strategic Manufacturing</p></div>
+        <div class="sector">❤️<p>Healthcare</p></div>
+        <div class="sector">🌍<p>IT-ITES</p></div>
+        <div class="sector">🧵<p>Leather</p></div>
+        <div class="sector">🛍️<p>Retail</p></div>
+        <div class="sector">📦<p>Logistics</p></div>
+    </div>
+</section>
+
+<section class="popular">
+    <h2>Popular <span>Searches</span></h2>
+
+    <div class="popular-box">
+        <div class="browse-card">
+            <h3>BROWSE BY SECTORS</h3>
+            <ul>
+                <li>BFSI</li><li>IT-ITES</li><li>Manufacturing</li>
+                <li>Automotive</li><li>Healthcare</li><li>Food Processing</li>
+            </ul>
+        </div>
+
+        <div class="browse-card dark">
+            <h3>BROWSE BY LOCATION</h3>
+            <ul>
+                <li>Chennai</li><li>Coimbatore</li><li>Thiruchirappalli</li>
+                <li>Madurai</li><li>Salem</li><li>Erode</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="tn-footer">
+    <p>Department Of Employment And Training, Chennai</p>
+    <p>Copyright © 2026 DET - Government Job Portal. All Rights Reserved.</p>
+</footer>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-header">
+            <div class="popup-logo">🏛️</div>
+            <h2>Beware of Misleading Communication</h2>
+        </div>
+
+        <div class="popup-body">
+            <p>Some websites or persons may claim association with this job portal. Such communication may be fraudulent.</p>
+            <p><b>Portal services are free of cost.</b> Do not pay any money for registration, application, or interview.</p>
+            <p>Verify information only through official sources.</p>
+
+            <div class="helpline">☎ 044-29580200 | 1930 (Cyber Crime)</div>
+
+            <p class="note">Ignore mails from unknown email IDs claiming to represent the portal.</p>
+            <button class="popup-btn" onclick="closePopup()">Okay, Got it</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

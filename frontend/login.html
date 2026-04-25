@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+
+<header class="auth-header">
+    <div class="brand">
+        <div class="gov-logo">🏛️</div>
+        <div>
+            <h2>Department of</h2>
+            <h2>Employment and Training</h2>
+        </div>
+    </div>
+
+    <div class="auth-nav">
+        <a href="index.html" data-key="home">🏚️HOME</a>
+        <a href="dashboard.html" data-key="jobs">💼 JOBS</a>
+        
+
+        <button class="blue-btn" data-key="loginBtn">Login ▼</button>
+
+        <select id="languageSelect" onchange="changeLanguage()" class="lang-select">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+            <option value="hi">हिन्दी</option>
+            <option value="te">తెలుగు</option>
+            <option value="kn">ಕನ್ನಡ</option>
+        </select>
+    </div>
+</header>
+
+<section class="warning-box">
+    <h2>
+        <span data-key="warningTitle"></span>
+        <span class="important">⚠️ IMPORTANT WARNING ⚠️ </span>
+    </h2>
+    <p data-key="warningText">
+        All services provided to job seekers through this website are free of cost.
+        Do not pay money to any employer or agent for jobs.
+    </p>
+</section>
+
+<main class="auth-layout">
+    <section class="info-section">
+        <h3 data-key="experienceTitle">PROVIDES CANDIDATES A POSITIVE AND HELPFUL EXPERIENCE</h3>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-icon">🔎</div>
+                <h4 data-key="jobSearch">Job Search</h4>
+                <p data-key="jobSearchText">Find jobs that suit your skills and expectations from various employers.</p>
+            </div>
+
+            <div class="info-item card-highlight">
+                <div class="info-icon">🤝</div>
+                <h4 data-key="jobsTitle">Jobs</h4>
+                <p data-key="jobsText">Search with your areas of expertise and get roles suiting your qualification.</p>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">👥</div>
+                <h4 data-key="jobFairTitle">Job Fair</h4>
+                <p data-key="jobFairText">Attend job fairs and connect with suitable employers easily.</p>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon">📄</div>
+                <h4 data-key="resumeTitle">Upload Your Resume</h4>
+                <p data-key="resumeText">Upload your resume and apply for suitable jobs posted by departments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="auth-card">
+        <h2 data-key="loginTitle">Login as Candidate</h2>
+        <hr>
+
+        <label data-key="emailLabel">E-mail / Mobile Number *</label>
+        <input type="email" id="email" data-placeholder="emailPlaceholder" placeholder="E-mail / Mobile Number">
+
+        <label data-key="passwordLabel">Password *</label>
+        <input type="password" id="password" data-placeholder="passwordPlaceholder" placeholder="Password">
+
+        
+
+        
+
+        <button class="green-btn" onclick="login()" data-key="loginOnly">Login</button>
+
+        <div class="auth-links">
+            <p>
+                <span data-key="newAccount">To create a new account</span>
+                <a href="register.html" data-key="clickHere">Click here</a>
+            </p>
+            <a href="#" data-key="forgotPassword">Forgot Password</a>
+        </div>
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

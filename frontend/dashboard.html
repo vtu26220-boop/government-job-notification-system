@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government Job Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadJobs()">
+
+<header class="top-header">
+    <div class="logo-area">
+        <div class="logo-circle">🏛️</div>
+        <div>
+            <h3>Department of Employment and Training</h3>
+            <p>Government Job Notification System</p>
+        </div>
+    </div>
+
+    <div class="top-menu">
+        <button onclick="window.location.href='dashboard.html'">Home</button>
+        <button onclick="window.location.href='profile.html'">Profile</button>
+        <button onclick="window.location.href='history.html'">History</button>
+        <button onclick="logout()" class="login-btn">Logout</button>
+    </div>
+</header>
+
+<div class="news-strip">
+    <marquee>
+        Latest Government Job Notifications | Apply before deadline | Exam dates updated | Track your application status online
+    </marquee>
+</div>
+
+<section class="hero">
+    
+    <h2>Government Job Notification Portal</h2>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search Job Category">
+        <button onclick="searchCategory()">🔍</button>
+    </div>
+</section>
+
+<section class="vacancy-banner">
+    <div>
+        <h1>Live Vacancies <span>LIVE</span></h1>
+        <p>Find thousands of government job opportunities and apply easily.</p>
+    </div>
+
+    <div class="big-stats">
+        <div>
+            <h1>14,490</h1>
+            <p>Vacancies</p>
+        </div>
+        <div>
+            <h1>291</h1>
+            <p>Departments</p>
+        </div>
+    </div>
+</section>
+<select id="languageSelect" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="ta">தமிழ்</option>
+    <option value="hi">हिन्दी</option>
+</select>
+<section class="stats-row">
+    <div>🏢<h3>12,325</h3><p>Companies</p></div>
+    <div>⚙️<h3>43</h3><p>Sectors</p></div>
+    <div>📋<h3>449,063</h3><p>Jobs Posted</p></div>
+    <div>👥<h3>540,707</h3><p>Job Seekers</p></div>
+    <div>💼<h3>70,156</h3><p>Preferred</p></div>
+    <div>✅<h3>53,603</h3><p>Placed</p></div>
+</section>
+
+<section class="latest-section">
+    <h1>Latest <span>Jobs</span></h1>
+    <div id="jobs" class="latest-jobs"></div>
+</section>
+
+<section class="sector-section">
+    <h1>Top <span>Sectors</span></h1>
+
+    <div class="sector-icons">
+        <div>🛡️<p>Defence</p></div>
+        <div>🚆<p>Railway</p></div>
+        <div>🏥<p>Healthcare</p></div>
+        <div>🏦<p>Banking</p></div>
+        <div>👮<p>Police</p></div>
+        <div>🎓<p>Education</p></div>
+        <div>⚡<p>Electricity</p></div>
+        <div>🏛️<p>Public Service</p></div>
+    </div>
+</section>
+
+<section class="popular-section">
+    <h1>Popular <span>Searches</span></h1>
+
+    <div class="popular-boxes">
+        <div class="popular-card">
+            <h2>Browse By Sectors</h2>
+            <ul>
+                <li>BPSC</li>
+                <li>Railway</li>
+                <li>Police</li>
+                <li>Banking</li>
+                <li>Teaching</li>
+                <li>Healthcare</li>
+            </ul>
+        </div>
+
+        <div class="popular-card dark">
+            <h2>Browse By Location</h2>
+            <ul>
+                <li>Chennai</li>
+                <li>Hyderabad</li>
+                <li>Bangalore</li>
+                <li>Delhi</li>
+                <li>Mumbai</li>
+                <li>Vijayawada</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<div id="applyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeApplyForm()">&times;</span>
+
+        <h2>Professional Job Application Form</h2>
+
+        <input type="hidden" id="applyJobId">
+
+        <div class="row">
+            <input id="firstName" placeholder="First Name *">
+            <input id="middleName" placeholder="Middle Name">
+            <input id="lastName" placeholder="Last Name *">
+        </div>
+
+        <input id="appEmail" type="email" placeholder="Email Address *">
+        <input id="whatsappNo" placeholder="WhatsApp Number *">
+
+        <select id="gender">
+            <option value="">Select Gender *</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <select id="currentStatus">
+            <option value="">Current Status *</option>
+            <option>Student</option>
+            <option>Employee</option>
+            <option>Unemployed</option>
+            <option>Fresher</option>
+            <option>Self Employed</option>
+        </select>
+
+        <select id="hasExperience" onchange="showExperienceBox()">
+            <option value="">Do you have experience? *</option>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+
+        <textarea id="experienceDetails" placeholder="Company name, role, years of experience" style="display:none;"></textarea>
+
+        <input id="qualification" placeholder="Highest Qualification *">
+        <textarea id="address" placeholder="Full Address *"></textarea>
+
+        <button onclick="submitApplication()">Submit Application</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadProfile()" class="profile-page">
+
+<header class="profile-header">
+    <h2>My Profile</h2>
+
+    <div>
+        <button onclick="window.location.href='dashboard.html'">Dashboard</button>
+        <button onclick="window.location.href='history.html'">History</button>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+</header>
+
+<section class="profile-hero">
+    <h1>Candidate Profile</h1>
+    <p>View your registered account details.</p>
+</section>
+
+<main class="profile-container">
+    <div class="profile-card-pro">
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+        <h2 id="pname">User Name</h2>
+        <p class="role-badge" id="prole">USER</p>
+
+        <div class="profile-details">
+            <div>
+                <b>Name</b>
+                <span id="pname2">Loading...</span>
+            </div>
+
+            <div>
+                <b>Email</b>
+                <span id="pemail">Loading...</span>
+            </div>
+
+            <div>
+                <b>Role</b>
+                <span id="prole2">Loading...</span>
+            </div>
+        </div>
+
+        <button class="profile-action" onclick="window.location.href='dashboard.html'">
+            Browse Jobs
+        </button>
+    </div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

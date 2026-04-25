@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Application History</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadHistory()" class="history-page">
+
+<header class="history-header">
+    <h2>Application History</h2>
+
+    <div>
+        <button onclick="window.location.href='dashboard.html'">Dashboard</button>
+        <button onclick="window.location.href='profile.html'">Profile</button>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+</header>
+
+<section class="history-hero">
+    <h1>My Job Applications</h1>
+    <p>Track your submitted applications, status, and personal details.</p>
+</section>
+
+<main class="history-container">
+    <div id="history" class="history-grid"></div>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
